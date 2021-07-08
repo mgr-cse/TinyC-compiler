@@ -1,0 +1,133 @@
+FUNCTION swap:
+	t0= *a
+	t= t0
+	t1= *b
+	*a= t1
+	*b= t
+END FUNCTION
+
+FUNCTION bubble_sort:
+	t2= 0
+	t3= n==t2
+	if t3 Jump 14
+	Jump 15
+	return
+	t4= 1
+	t5= 4
+	t5= t4*t5
+	t6= (ptr)t5
+	t7= a+t6
+	t8= 1
+	t9= n-t8
+	parameter t7
+	parameter t9
+	t10= CALL bubble_sort 2
+	t11= 1
+	i= t11
+	t12= i<n
+	if t12 Jump 35
+	Jump 67
+	t13= i
+	t14= 1
+	t15= t14+i
+	i= t15
+	Jump 27
+	t16= 1
+	t17= i-t16
+	t19= 4
+	t19= t17*t19
+	t18= (ptr)t19
+	t18= t18+a
+	t21= 4
+	t21= i*t21
+	t20= (ptr)t21
+	t20= t20+a
+	t22= *t18
+	t23= *t20
+	t24= t22>t23
+	if t24 Jump 50
+	Jump 66
+	t25= 4
+	t25= i*t25
+	t26= (ptr)t25
+	t27= a+t26
+	t28= 1
+	t29= 4
+	t29= t28*t29
+	t30= (ptr)t29
+	t31= t27-t30
+	t32= 4
+	t32= i*t32
+	t33= (ptr)t32
+	t34= a+t33
+	parameter t31
+	parameter t34
+	t35= CALL swap 2
+	Jump 30
+END FUNCTION
+
+FUNCTION main:
+	t36= "Enter size of array: "
+	parameter t36
+	t37= CALL printStr 1
+	t38= &n
+	parameter t38
+	t39= CALL readInt 1
+	a= memory 4000
+	t40= 0
+	i= t40
+	t41= i<n
+	if t41 Jump 87
+	Jump 102
+	t42= i
+	t43= 1
+	t44= t43+i
+	i= t44
+	Jump 79
+	t45= "Enter a["
+	parameter t45
+	t46= CALL printStr 1
+	parameter i
+	t47= CALL printInt 1
+	t48= "]: "
+	parameter t48
+	t49= CALL printStr 1
+	t50= 4
+	t50= i*t50
+	t51= (ptr)t50
+	t52= a+t51
+	parameter t52
+	t53= CALL readInt 1
+	Jump 82
+	parameter a
+	parameter n
+	t54= CALL bubble_sort 2
+	t55= "Sorted array is: "
+	parameter t55
+	t56= CALL printStr 1
+	t57= 0
+	i= t57
+	t58= i<n
+	if t58 Jump 118
+	Jump 129
+	t59= i
+	t60= 1
+	t61= t60+i
+	i= t61
+	Jump 110
+	t63= 4
+	t63= i*t63
+	t62= (ptr)t63
+	t62= t62+a
+	t64= *t62
+	parameter t64
+	t65= CALL printInt 1
+	t66= " "
+	parameter t66
+	t67= CALL printStr 1
+	Jump 113
+	t68= "\n"
+	parameter t68
+	t69= CALL printStr 1
+END FUNCTION
+

@@ -1,0 +1,42 @@
+FUNCTION main:
+	t0= "Enter number a: "
+	parameter t0
+	t1= CALL printStr 1
+	t2= &a
+	parameter t2
+	t3= CALL readInt 1
+	t4= "Enter number b: "
+	parameter t4
+	t5= CALL printStr 1
+	t6= &b
+	parameter t6
+	t7= CALL readInt 1
+	t8= "Sum of a and b is: "
+	parameter t8
+	t9= CALL printStr 1
+	t10= a+b
+	parameter t10
+	t11= CALL printInt 1
+	t12= "\n"
+	parameter t12
+	t13= CALL printStr 1
+	t14= "Diff of a and b is: "
+	parameter t14
+	t15= CALL printStr 1
+	t16= a-b
+	parameter t16
+	t17= CALL printInt 1
+	t18= "\n"
+	parameter t18
+	t19= CALL printStr 1
+	t20= "Mult of a and b is: "
+	parameter t20
+	t21= CALL printStr 1
+	t22= a*b
+	parameter t22
+	t23= CALL printInt 1
+	t24= "\n"
+	parameter t24
+	t25= CALL printStr 1
+END FUNCTION
+

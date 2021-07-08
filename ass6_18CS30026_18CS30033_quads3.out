@@ -1,0 +1,32 @@
+FUNCTION main:
+	t0= "Enter number n >0: "
+	parameter t0
+	t1= CALL printStr 1
+	t2= &n
+	parameter t2
+	t3= CALL readInt 1
+	t4= 0
+	sum= t4
+	t5= 0
+	i= t5
+	t6= i<=n
+	if t6 Jump 20
+	Jump 23
+	t7= i
+	t8= 1
+	t9= t8+i
+	i= t9
+	Jump 12
+	t10= sum+i
+	sum= t10
+	Jump 15
+	t11= "Sum of first n number is: "
+	parameter t11
+	t12= CALL printStr 1
+	parameter sum
+	t13= CALL printInt 1
+	t14= "\n"
+	parameter t14
+	t15= CALL printStr 1
+END FUNCTION
+
